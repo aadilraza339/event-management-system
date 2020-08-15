@@ -6,4 +6,6 @@ user.post('/signup', User.signup)
 
 user.post('/login',User.login)
 
+user.get('/users',User.users)
+
 module.exports = user
