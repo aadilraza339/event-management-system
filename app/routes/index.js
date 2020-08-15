@@ -1,9 +1,11 @@
 const express = require("express");
-const USER = express.Router();
+const event = express.Router();
 
 
 const user  = require("./user")
-USER.use("/user", user);
+event.use("/user", user);
 
+const events = require('./event')
+event.use('/',events)
 
-module.exports = USER;
+module.exports = event;

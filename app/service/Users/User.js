@@ -1,7 +1,7 @@
 const knex = require('../../models/connection')
 const passwordHash = require('password-hash');
 const {server} = require('../../../config/index')
-const jwt = require('jsonwebtoken');
+const jwt = require('njwt')
 
 
 function hashedPassword(plain) {
@@ -13,10 +13,8 @@ function verify(password,hashedPassword){
 }
 
 function jwtToken(token_detail){
-  console.log(token_detail);
-  
-  return jwt.sign(token_detail
-  , 'secret', { expiresIn: '1h' });
+  return token = jwt.create(token_detail, 'top-secret-phrase')
+          token.setExpiration(new Date().getTime() + 60*1000)
 
 }
 
@@ -51,14 +49,14 @@ class User {
       if (isUser.length) {
         let check = verify(req.body.password, isUser[0]['password'])
         if(check){
-          let data = {
+          let claims = {
             id : isUser[0]['id'],
             user_role : isUser[0]['user_role']
           }
-          let jwt_Token  = jwtToken(data)
-          console.log(jwt_Token);
+          let token = jwtToken(claims)
+          console.log(token.compact());
           
-          res.cookie(jwt_Token)
+          res.cookie(token.compact())
           res.send('loing successful')
         }
         else{

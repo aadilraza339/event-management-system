@@ -3,9 +3,9 @@ const process = require("process");
 knex.schema.hasTable('events').then((exists) => {
     if (!exists) {
         return knex.schema.createTable('events', (table) => {
-            table.increments('id')
+            table.increments('event_id')
             table.integer('user_id').unsigned().notNullable();
-            table.string('event name')
+            table.string('event_name')
             table.string('description')
             table.string('city')
             table.date('start_date')
