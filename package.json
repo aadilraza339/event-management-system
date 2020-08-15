@@ -1,0 +1,21 @@
+{
+  "name": "event-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "knex": "^0.21.4",
+    "mysql": "^2.18.1",
+    "password-hash": "^1.2.2",
+    "schmervice": "^1.5.0"
+  }
+}
