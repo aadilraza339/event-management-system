@@ -13,6 +13,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.4",
     "mysql": "^2.18.1",
     "password-hash": "^1.2.2",

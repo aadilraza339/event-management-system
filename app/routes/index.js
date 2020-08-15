@@ -1,9 +1,9 @@
 const express = require("express");
-const turing = express.Router();
+const USER = express.Router();
 
 
 const user  = require("./user")
-turing.use("/user", user);
+USER.use("/user", user);
 
 
-module.exports = turing;
+module.exports = USER;
