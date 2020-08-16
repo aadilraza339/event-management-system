@@ -57,7 +57,19 @@ event.get('/events', Event.Search)
     "phone_num":"9736463632"
   }
 ````
+> http://localhost:8000/event/CreateEvent Create Events
+````
+{
+    "event_name":"node",
+    "description":"happy coding",
+    "city":"banglore",
+    "start_date":"7/12/2020"
+    "end_date" :"7/15/2020"
+
+}
+````
 # Tables
+                                      Register
 ````
 +----+-------+----------------+----------------------------------------------------------+------------+-----------+
 | id | name  | email          | password                                                 | phone_num  | user_role |
@@ -67,4 +79,18 @@ event.get('/events', Event.Search)
 |  9 | venu  | venu@gmail.com | sha1$9ebecf92$1$21239c17ff13a5d6d133201075cafacecca47f4d | 9736463632 | user      |
 +----+-------+----------------+----------------------------------------------------------+------------+-----------+
 ````
+                                      event
+````
+ +----------+---------+-------------+-----------------------+----------+------------+-----------+
+| event_id | user_id | event_name  | description           | city     | start_date | end_date  |
++----------+---------+-------------+-----------------------+----------+------------+-----------+
+|        2 |       8 | python      | will learn somethings | banglore | 2020-08-15 | 7/15/2020 |
+|        5 |       8 | nodejs      | will learn somethings | banglore | 2020-08-15 | 7/15/2020 |
+|        6 |       8 | nodejs      | will learn somethings | banglore | 2020-08-15 | 7/15/2020 |
+|        7 |       8 | nodejs      | will learn somethings | banglore | 2020-08-15 | 7/15/2020 |
+|       14 |       2 | delhi event | dance and party       | delete   | 2020-08-16 | 7/15/2020 |
+|       15 |       2 | delhi event | dance and party       | delhi    | 2020-08-16 | 7/15/2020 |
++----------+---------+-------------+-----------------------+----------+------------+-----------+
+````
+      
 
