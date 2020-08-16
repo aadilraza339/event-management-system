@@ -18,7 +18,11 @@ User should be able to sign up and login with email. Use JWT token for authentic
 6. Fetch all events by the user (With auth token)
 ````
 ___
-
+# How to run the Project?
+* `npm install`
+*  create `.env` file and config
+*  Run these files `/app/models/db-event.js` , `/app/models/db-user.js` for create tables
+*  `nodemon app.js`
 # Events routes
 ````
 USER Endpoint
