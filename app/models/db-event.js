@@ -8,7 +8,7 @@ knex.schema.hasTable('events').then((exists) => {
             table.string('event_name')
             table.string('description')
             table.string('city')
-            table.date('start_date')
+            table.string('start_date')
             table.string('end_date')
             table.foreign('user_id').references('id').inTable('register');
             

@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const Event = require("./app/routes/index");
+const Event = require("./app/routes/routesRegistry");
 app.use(express.json());
 
 const port  = require('./config/index')
