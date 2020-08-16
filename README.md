@@ -40,7 +40,16 @@ event.get('/usersEvents', Event.usersEvents)
 event.get('/events', Event.Search) 
 ````
 > http://localhost:8000/event/signup / signup
-````json
+````bash
+  { 
+    "name":"exmple",
+    "email":"venu@gmail.com",
+    "password":"9873752914",
+    "phone_num":"9736463632"
+  }
+````
+> http://localhost:8000/event/login / login
+````bash
   { 
     "name":"exmple",
     "email":"venu@gmail.com",
