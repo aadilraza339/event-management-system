@@ -22,7 +22,7 @@ ___
 * `npm install`
 *  create `.env` file and config
 *  Run these files `/app/models/db-event.js` , `/app/models/db-user.js` for create tables
-*  `nodemon app.js`
+*  `nodemon app.js` for run the server.
 # Events routes
 ````
 USER Endpoint
@@ -38,4 +38,13 @@ event.post('/editEvent/:eventId', Event.EditEvent)
 event.delete('/deleteEvent/:eventId', Event.DeleteEvent)
 event.get('/usersEvents', Event.usersEvents)  
 event.get('/events', Event.Search) 
+````
+> http://localhost:8000/event/signup / signup
+````json
+  { 
+    "name":"exmple",
+    "email":"venu@gmail.com",
+    "password":"9873752914",
+    "phone_num":"9736463632"
+  }
 ````
