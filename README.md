@@ -21,15 +21,17 @@ ___
 
 # Events routes
 ````
-user.post('/signup', User.signup)  <br>
-user.post('/login',User.login)  <br>
-user.get('/users',User.usersByAdmin)  <br>
-user.get('/users',User.myEvents)  <br>
+USER Endpoint
+user.post('/signup', User.signup) 
+user.post('/login',User.login)  
+user.get('/users',User.usersByAdmin) 
+user.get('/users',User.myEvents)  
 ````
-Events endpoint <br>
-event.post('/createEvent', Event.CreateEvent) <br> 
-event.post('/editEvent/:eventId', Event.EditEvent)  <br>
-event.delete('/deleteEvent/:eventId', Event.DeleteEvent) v
-event.get('/usersEvents', Event.usersEvents)  <br>
-event.get('/events', Event.Search) <br> 
-
+````
+Events Endpoint 
+event.post('/createEvent', Event.CreateEvent) 
+event.post('/editEvent/:eventId', Event.EditEvent) 
+event.delete('/deleteEvent/:eventId', Event.DeleteEvent)
+event.get('/usersEvents', Event.usersEvents)  
+event.get('/events', Event.Search) 
+````
